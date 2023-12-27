@@ -84,6 +84,10 @@
 						<td>
 							{cell.slice(0, 4)}
 						</td>
+					{:else if idx == 6}
+						<td>
+							<a class="underline" href={cell}>{cell}</a>
+						</td>
 					{:else}
 						<td>{cell}</td>
 					{/if}
