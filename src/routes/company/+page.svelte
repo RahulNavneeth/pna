@@ -63,7 +63,7 @@
 	</thead>
 	<tbody>
 		{#each DATA as row, rowIdx}
-			<tr class="w-full h-full {DATA[rowIdx][0] ? 'bg-green-200' : ''}">
+			<tr class="w-full h-full {DATA[rowIdx][0] ? 'bg-green-200 hover:bg-green-300' : ''}">
 				{#each row as cell, idx (cell)}
 					{#if idx == 0}
 						<td>
