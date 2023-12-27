@@ -20,7 +20,7 @@ export const load: PageServerLoad = async ({ fetch, url }) => {
             FILE_NAME = "META";
             break;
         case "NP":
-            FILE_NAME = "NETFILX";
+            FILE_NAME = "NETFLIX";
             break;
         case "ASS":
             FILE_NAME = "GOLDMANSACHS";
@@ -30,8 +30,10 @@ export const load: PageServerLoad = async ({ fetch, url }) => {
             break;
 
     }
+    console.log(`${FETCH_URL}${FILE_NAME}.csv`);
     const res = await fetch(`${FETCH_URL}${FILE_NAME}.csv`);
     const DATA = await res.json();
+    console.log(DATA);
     return {
         name: FILE_NAME,
         data: DATA.payload.blob.csv,
